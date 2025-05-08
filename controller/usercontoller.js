@@ -25,5 +25,5 @@ exports.submitsignup = async (req, res) => {
         }
     }else{
         res.send('비밀번호와 비밀번호 확인이 알맞지 않습니다.');
-    }
+    }//
 }
