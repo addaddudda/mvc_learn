@@ -7,4 +7,4 @@ const pool = mysql.createPool({
     database: 'mvc_learn'
 })
 
-module.exports = pool;
+module.exports = pool;//
