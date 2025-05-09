@@ -21,7 +21,7 @@ exports.submitsignup = async (req, res) => {
             res.send('성공적으로 회원가입이 완료되었습니다.');
         }
         catch(err){
-            throw err;
+            res.send('회원가입중 오류');
         }
     }else{
         res.send('비밀번호와 비밀번호 확인이 알맞지 않습니다.');
@@ -35,15 +35,16 @@ exports.login = async(req, res) => {
 exports.submitlogin = async (req, res) => {
     const {id, password} = req.body;
     try {
-        const user = usermodel.login(id, password);
+        const user = await usermodel.login(id, password);
         if(user){
             res.redirect('http://localhost:80/');
+            res.render('afterlogin');
         }
         else{
             res.render('login2');
         }
     }
     catch(err) {
-        res.send('로그인중 오류');
+        throw err;
     }
 }
