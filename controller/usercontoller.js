@@ -37,7 +37,6 @@ exports.submitlogin = async (req, res) => {
     try {
         const user = await usermodel.login(id, password);
         if(user){
-            res.redirect('http://localhost:80/');
             res.render('afterlogin');
         }
         else{

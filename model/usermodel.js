@@ -13,9 +13,9 @@ const usermodel = {
         return true;
     },
     login: async (user, password) => {
-        const [rows] = db.execute('SELECT * FROM user WHERE name=? and password=?', [user, password]);
+        const [rows] = await db.execute('SELECT * FROM user WHERE name=? and password=?', [user, password]);
         return rows.length > 0;
     }
 }
 
-module.exports = usermodel;////
+module.exports = usermodel;
