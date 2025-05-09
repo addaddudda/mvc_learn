@@ -11,6 +11,10 @@ const usermodel = {
         }
         const [rows] = await db.execute('INSERT INTO user (name, password) VALUES (?, ?)', [user, password]);
         return true;
+    },
+    login: async (user, password) => {
+        const [rows] = db.execute('SELECT * FROM user WHERE name=? and password=?', [user, password]);
+        return rows.length > 0;
     }
 }
 
