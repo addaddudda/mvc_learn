@@ -3,7 +3,7 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
+        title login
         style.
             .red{
                 color: red;
@@ -11,9 +11,9 @@ html(lang="en")
     body 
         form(action="/login", method="post")
             input(type="text", name="id", placeholder="id")
-            article 아이디가 맞지 않습니다
+            article(class="red") 아이디가 맞지 않습니다
             p 
             input(type="text", name="password", placeholder="password")
-            article 비밀번호가 맞지 않습니다
+            article(class="red") 비밀번호가 맞지 않습니다
             p 
             input(type="submit", name="submit", value="submit") 
