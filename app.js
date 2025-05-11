@@ -14,4 +14,4 @@ app.listen(80, () => {
 })
 
 app.use('/', userrouter);//로그인
-app.use('/', postrouter);//메모올리기
+app.use('/', postrouter);//메모
