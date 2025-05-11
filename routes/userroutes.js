@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const usercontroller = require('../controller/usercontoller');
+const usercontroller = require('../controller/usercontroller');
 const router = Router();
 
 router.get('/', usercontroller.home);
